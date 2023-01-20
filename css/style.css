@@ -1,0 +1,360 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 28px;
+  justify-content: space-between;
+  background-color: transparent;
+  color: black;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+}
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 60px;
+  text-transform: capitalize;
+}
+
+.nav-links {
+  list-style-type: none;
+  text-align: right;
+  padding: 0.5rem;
+}
+
+.menu li {
+  display: inline-block;
+  margin-inline: 0.5rem;
+}
+
+.menu li a {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: black;
+  margin-right: 20px;
+}
+
+.menu li a:hover {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #1cbb9c;
+  margin-right: 20px;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+.mainheader {
+  height: 100vh;
+  padding-top: 10rem;
+  background: linear-gradient(
+      to bottom,
+      rgba(92, 77, 66, 0.8) 0%,
+      rgba(92, 77, 66, 0.8) 100%
+    ),
+    url("https://startbootstrap.github.io/startbootstrap-creative/assets/img/bg-masthead.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  
+}
+
+
+
+header.mainheader  h1 {
+  font-size: 2.25rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.2;
+}
+hr {
+  border: none;
+}
+
+hr.divider {
+  height: 0.2rem;
+  max-width: 3.25rem;
+  margin: 1.5rem auto;
+  background-color: #f4623a;
+  opacity: 1;
+}
+
+header.mainheader p {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+button.mainbutton {
+  padding: 1.25rem 2.25rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 10rem;
+  color: #fff;
+  background-color: #f4623a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+  margin-top: 50px;
+}
+
+
+button.light{
+  background-color: #fff;
+  color: black;
+}
+
+section.page {
+  padding: 8rem 0;
+  background-color: #f4623a;
+  color: #fff;
+  text-align: center;
+}
+
+.page hr.divider{
+  background-color: #fff;
+}
+
+.page p{
+  text-align: center;
+  padding-inline: 10rem;
+  line-height: 1.5rem;
+  font-weight: lighter;
+}
+
+section.services {
+  padding: 8rem 0;
+}
+
+section.services h1{
+  display: flex;
+  justify-content: center;
+}
+
+.service-grid{
+display: grid;
+grid-template-columns: auto auto auto auto;
+}
+
+.portfolio-grid{
+ 
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.portfolio-grid-item{
+  max-width: 500px;
+}
+
+.portfolio-grid-item img{
+  width: 100%;
+  height: 100%;
+}
+
+section.download{
+  padding: 8rem 0;
+  background-color: #212529;
+  color: #fff;
+}
+
+.download h1{
+  display: flex;
+  justify-content: center;
+}
+
+
+section.contact {
+  padding: 8rem 0;
+}
+
+.contact h1,p{
+  display: flex;
+  justify-content: center;
+}
+
+.contact p{
+  line-height: 1.5rem;
+  text-align: center;
+  color: #6c757d ;
+ 
+}
+
+/* form.contactform {
+  margin: auto;
+  width: 90vw;
+  max-width: 768px;
+  padding: 3vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+.contactform label {
+  width: 100%;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #293446;
+  font-size: 25px;
+  opacity: 0.8;
+  border-bottom: 1px solid gray;
+}
+
+.contactform input {
+  height: 40px;
+  font-size: larger;
+  width: 100%;
+  padding: 10px 0px;
+  margin-top: 20px;
+  border: none;
+  outline: none;
+}
+.contactform input::placeholder {
+  opacity: 0;
+}
+
+.contactform span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(30px);
+  font-size: 0.825em;
+  transition-duration: 300ms;
+}
+
+label.message {
+  margin-top: 10px;
+  border: none;
+}
+label > textarea {
+  width: 100%;
+  border: none;
+  font-size: larger;
+  
+  font-family: "Montserrat", "sans-serif", "Lato";
+  margin-top: 30px;
+}
+
+label:focus-within > span,
+input:not(:placeholder-shown) + span {
+  font-size: small;
+  transform: translateY(0px);
+} */
+
+form{
+  
+ 
+
+}
+
+.container {
+  position: relative;
+  top: auto;
+  left: auto;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 500px;
+  margin-top: 1rem;
+  }
+
+ 
+
+  input {
+    padding:1.3em;
+    margin-left: -9px;
+    border: 1px solid #ccc;
+  -webkit-box-shadow: inset 0 1px 0 #eee,#fff 0 1px 0;
+  box-shadow: inset 0 1px 0 #eee,#fff 0 1px 0;
+    border-radius:5px;
+    width:100%;
+  }
+
+  label {
+    position: absolute;
+    top: 0;
+    right: 1px;
+    bottom: 1px;
+    left: .5em;
+    z-index: 1;
+    height: 1em;
+    font-size: 1rem;
+    line-height: 3.5em;
+    color: #212529;;
+    white-space: nowrap;
+    cursor: text;
+    transition:all .1s ease;
+    
+    
+    }
+
+    input:focus ~ label, input:valid ~label {
+  font-size:9px;
+  font-weight:bold;
+  left:5px;
+  top:-5px;
+  
+}
+
+
+@media only screen and (max-width: 768px) {
+  .mobile-nav {
+    display: block;
+  }
+
+  .menu li a {
+    display: none;
+  }
+
+  .portfolio-grid{
+ 
+    display: grid;
+    grid-template-columns: auto auto ;
+  }
+
+
+
+}
+
+@media only screen and (max-width: 500px){
+  .portfolio-grid{
+ 
+    display: grid;
+    grid-template-columns: auto  ;
+  }
+}
+
+
+
+
